@@ -7,8 +7,16 @@
     "express": "^4.17.1",
     "mongodb": "^3.3.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
+  },
   "scripts": {
+    "build": "babel -w src -d dist",
+    "run-app": "nodemon dist/app",
+    "start": "npm run build & npm run run-app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
